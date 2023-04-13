@@ -103,3 +103,4 @@ def test_password_with_less_than_8_characters_should_return_status_400():
     # then
     print(response.content)
     assert response.status_code == 400
+    
