@@ -52,7 +52,7 @@ def test_password_validation_8_chars_good_password_should_return_status_201():
 
 
 def test_password_with_no_numbers_should_return_status_400():
-        # given
+    # given
     empty_password_dict = {"content": "aB@@cD##"}
     # when
     response = client.post("/", json=empty_password_dict)
@@ -62,7 +62,7 @@ def test_password_with_no_numbers_should_return_status_400():
 
 
 def test_password_with_no_upper_letters_should_return_status_400():
-        # given
+    # given
     empty_password_dict = {"content": "ab1@cd2#"}
     # when
     response = client.post("/", json=empty_password_dict)
@@ -72,7 +72,7 @@ def test_password_with_no_upper_letters_should_return_status_400():
 
 
 def test_password_with_no_lowwer_letter_should_return_status_400():
-        # given
+    # given
     empty_password_dict = {"content": "AB@@CD##"}
     # when
     response = client.post("/", json=empty_password_dict)
@@ -82,7 +82,7 @@ def test_password_with_no_lowwer_letter_should_return_status_400():
 
 
 def test_password_with_no_esp_character_should_return_status_400():
-        # given
+    # given
     empty_password_dict = {"content": "aB23cD45"}
     # when
     response = client.post("/", json=empty_password_dict)
@@ -92,7 +92,7 @@ def test_password_with_no_esp_character_should_return_status_400():
 
 
 def test_password_with_no_wrong_spc_characters_should_return_status_400():
-        # given
+    # given
     empty_password_dict = {"content": "aB@~cD##"}
     # when
     response = client.post("/", json=empty_password_dict)
@@ -102,7 +102,7 @@ def test_password_with_no_wrong_spc_characters_should_return_status_400():
 
 
 def test_password_with_less_than_8_characters_should_return_status_400():
-        # given
+    # given
     empty_password_dict = {"content": "aB@@cD#"}
     # when
     response = client.post("/", json=empty_password_dict)
